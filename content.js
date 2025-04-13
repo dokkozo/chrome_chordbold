@@ -135,6 +135,9 @@ function applyStyleFromStorage() {
           display: inline-flex;
           flex-direction: column;
         }
+        div.main span.chordword, div.main span.wordtop {
+          margin-right: 5px;
+        }
         div.main span.chord, div.main span.word, div.main span.wordtop {
           position: static;
           line-height: ${compactLineHeight}px;
@@ -321,7 +324,6 @@ function enableEmbedPlayer() {
   };
   videoPlayer.init();
   document.querySelectorAll(".movie a").forEach((movie) => {
-    console.log(movie);
     if (movie.href.startsWith("https://www.youtube.com")) {
       const videoId = movie.href.split("?v=").pop();
       if (videoId) {
